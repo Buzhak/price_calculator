@@ -12,7 +12,7 @@
     </head>
     <body>
         <h3>{{ page_title }}</h3>
-        <form action="{{ url_for('process_add_in_session') }}" method="POST">
+        <form action="{{ url_for('calculator.process_add_in_session') }}" method="POST">
             {{ form.hidden_tag() }}
             <p>
                 {{ form.material.label }}<br>
@@ -32,7 +32,7 @@
                 {{ order_cost_title }} {{ count_price }}
             </p>
                 
-            <a href="{{ url_for('clear_session') }}" class="btn btn-danger">Очистить список</a>
+            <a href="{{ url_for('calculator.clear_session') }}" class="btn btn-danger">Очистить список</a>
         </form>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
