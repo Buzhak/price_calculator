@@ -19,17 +19,19 @@
                 {{ form.material() }}
             </p>  
             <p>
-                {{ form.long.label }}<br>
-                {{ form.long() }}
+                {{ form.cut.label }}<br>
+                {{ form.cut() }}
             </p>
             <p>
                 {{ form.submit() }}
             </p>
                 {% for item in price %}
-                    {{ item[0] }} - {{ item[1] }}м.п<br>
+                    {{ item[0] }} - {{ item[1] }}м.п
+                    <a href="{{ url_for('calculator.del_item', item_name=item[0]) }}" class="btn btn-danger">del</a><br>
                 {% endfor %}
             <p>
-                {{ order_cost_title }} {{ count_price }}
+                {{ order_cost_title }} {{ count_price }} 
+    
             </p>
                 
             <a href="{{ url_for('calculator.clear_session') }}" class="btn btn-danger">Очистить список</a>

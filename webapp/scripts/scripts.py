@@ -1,6 +1,3 @@
-import re
-
-
 PRICE_MATERIAL = {
     "акрил-3мм":30,
     "акрил-4мм":40,
@@ -20,11 +17,8 @@ PRICE_MATERIAL = {
 COST_FILE_EDIT = 300
 MIN_COST = 600
 
-def price() -> list:
-    return PRICE_MATERIAL.keys()
-
 def serialize_price() -> list:
-    return [(name, name) for name in price()]
+    return [(name, name) for name in PRICE_MATERIAL.keys()]
 
 def cost_calc(cutting_len: int, material: str) -> int:
     return cutting_len * PRICE_MATERIAL[material]

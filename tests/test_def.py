@@ -1,7 +1,6 @@
 from webapp.scripts import cost_calc, price, serialize_price, sum_prices, COST_FILE_EDIT, MIN_COST
+import pytest
 
-def test_price():
-    assert iter(price()) 
 
 def test_serialize_price():
     assert iter(serialize_price()) 
